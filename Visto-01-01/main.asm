@@ -30,6 +30,7 @@ EXP1:		MOV			#MSG,R5			;Coloca o vetor MSG em R5
 			MOV.B		#'A',R11
 			MOV.B		#'Z',R12
 			CALL		#ENIGMA1		;Chama a sub-rotina ENIGMA1
+			MOV			#GSM,R9
 			CALL		#DECIF1
 				JMP			$
 
