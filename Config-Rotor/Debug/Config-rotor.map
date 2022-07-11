@@ -1,9 +1,9 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.0                     
 ******************************************************************************
->> Linked Sun Jul 10 22:19:26 2022
+>> Linked Sun Jul 10 22:10:43 2022
 
-OUTPUT FILE NAME:   <EXP02.out>
+OUTPUT FILE NAME:   <Config-rotor.out>
 ENTRY POINT SYMBOL: "RESET"  address: 00004400
 
 

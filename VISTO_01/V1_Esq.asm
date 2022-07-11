@@ -1,3 +1,10 @@
+* 160027764				FABRICIO BARRETO NOGUEIRA
+* Sol = 3
+
+***************************
+*** Visto 1 - Esqueleto ***
+***************************
+
 ;-------------------------------------------------------------------------------
 ; MSP430 Assembler Code Template for use with TI Code Composer Studio
 ;
@@ -39,7 +46,6 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ; Coloque aqui sua sub-rotina ENIGMA %
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 ENIGMA:
 			MOV			#CHAVE,R14
 			MOV			12(R14),R11
@@ -158,9 +164,7 @@ MSG_DECIFR:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Coloque aqui suas Variáveis ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-
+;
 
 
 ;-------------------------------------------------------------------------------
