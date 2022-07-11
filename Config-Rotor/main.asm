@@ -1,5 +1,5 @@
 * 160027764		FABRICIO BARRETO NOGUEIRA
-* Sol = 3
+* Sol = 2
 
 ***************************
 *** Visto 1 - Esqueleto ***
@@ -48,17 +48,20 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ENIGMA:
+			MOV			#RT3,R7
 			MOV			#CHAVE,R14
-			MOV			12(R14),R11
+			MOV			10(R14),R11
+			TST			R11
 			JZ			SEMCONFIG
 COMCONFIG:
-			CALL		#CONFIG
+
 			DEC			R11
 			JNZ			COMCONFIG
 SEMCONFIG:
 			MOV.B		@R5,R7
 			TST.B		R7
 			JNZ			EN1
+			MOV			#0,10(R14)
 			RET
 
 EN1:		MOV.B		R7,R10

@@ -47,12 +47,20 @@ VISTO1:		MOV			#MSG_CLARA,R5
 ; Coloque aqui sua sub-rotina ENIGMA %
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ENIGMA:
-			MOV.B		#'A',R11
-			MOV.B		#'Z',R12
-			CALL		#CONFIG
+			MOV			#RT3,R7
+			MOV			#CHAVE,R14
+			MOV			10(R14),R11
+			TST			R11
+			JZ			SEMCONFIG
+COMCONFIG:
+
+			DEC			R11
+			JNZ			COMCONFIG
+SEMCONFIG:
 			MOV.B		@R5,R7
 			TST.B		R7
 			JNZ			EN1
+			MOV			#0,10(R14)
 			RET
 
 EN1:		MOV.B		R7,R10
@@ -100,6 +108,7 @@ LACO:
 			JNZ			LACO
 			MOV.B		R9,0(R7)
 			RET
+
 
 *********************************
 ******    Área de dados    ******
