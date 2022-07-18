@@ -46,6 +46,6 @@ void GPIO_config(void) {
 
 
 void atraso(int x) {
-    int i;
+    volatile int i;
     for(i = x; i <= 0; i--);
 }
